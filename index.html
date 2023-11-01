@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Douglas Santos Portifolio de Atividades</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Intro -->
+      <section class="intro">
+        <header>
+          <h1>Douglas Santos</h1>
+          <p>
+            Este é meu arquivo de atividades designed by /
+            <a href="https://github.com/thefoxdeveloper">fox</a>
+          </p>
+          <ul class="actions">
+            <li>
+              <a href="#first" class="arrow scrolly"
+                ><span class="label">Next</span></a
+              >
+            </li>
+          </ul>
+        </header>
+        <div class="content">
+          <span class="image fill" data-position="center"
+            ><img src="images/pngwing.com.png" alt=""
+          /></span>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section id="first">
+        <header>
+          <h2>Atividade Prática - Lógica simples e Estruturas Condicionais</h2>
+          <ul class="actions">
+            <li>
+              <a href="#second" class="arrow scrolly"
+                ><span class="label">Next</span></a
+              >
+            </li>
+          </ul>
+        </header>
+        <div class="content">
+          <p>
+            1. Crie uma variável JavaScript e coloque nela o valor de sua idade.
+            Mostre no HTML usando o document.write() o dado contido na variável
+            junto da frase "Minha idade é x anos", sendo "x" o valor armazenado
+            na sua variável.
+          </p>
+
+          <form>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" value="25" /><br />
+            <button
+              type="button"
+              onclick="showAge()"
+              class="button primary large"
+            >
+              Mostrar Idade
+            </button>
+          </form>
+          <p id="resultado"></p>
+          <script>
+            function showAge() {
+              let minhaIdade = parseInt(document.getElementById("idade").value);
+              document.getElementById("resultado").innerHTML =
+                "Minha idade é " + minhaIdade + " anos.";
+            }
+          </script>
+
+          <p>
+            2. Crie três variáveis JavaScript, em duas delas atribua os valores
+            que você quiser e na outra atribua o valor da soma das duas
+            primeiras variáveis. Apresente o valor da soma no documento HTML
+            junto da frase "O resultado da soma de x e y é z", sendo x o valor
+            armazenado na primeira variável, y o valor armazenado na segunda
+            variável e z o valor armazenado na terceira variável.
+          </p>
+
+          <form>
+            <label for="x">Valor de X:</label>
+            <input type="number" id="x" name="x" value="10" />
+            <br />
+            <label for="y">Valor de Y:</label>
+            <input type="number" id="y" name="y" value="20" />
+            <br />
+            <button
+              type="button"
+              onclick="calculateSum()"
+              class="button primary large"
+            >
+              Calcular Soma
+            </button>
+          </form>
+          <p id="resultado2"></p>
+          <script>
+            function calculateSum() {
+              let x = parseInt(document.getElementById("x").value);
+              let y = parseInt(document.getElementById("y").value);
+              let z = x + y;
+              document.getElementById("resultado2").innerHTML =
+                "O resultado da soma de " + x + " e " + y + " é " + z + ".";
+            }
+          </script>
+          <p>
+            3. Crie três variáveis, na primeira variável coloque o total de uma
+            compra, por exemplo 149.90. Na segunda variável coloque a quantidade
+            de parcelas, por exemplo 2. Na terceira variável, coloque o valor da
+            parcela. Apresente no documento HTML as seguintes informações: "O
+            valor total da compra foi R$_,_" "Forma de pagamento: _x de R$_,_"
+          </p>
+          <form>
+            <label for="totalDaCompra">Valor total da compra (R$):</label>
+            <input
+              type="number"
+              id="totalDaCompra"
+              name="totalDaCompra"
+              value="149.9"
+            />
+            <br />
+            <label for="quantidadeDeParcelas">Quantidade de Parcelas:</label>
+            <input
+              type="number"
+              id="quantidadeDeParcelas"
+              name="quantidadeDeParcelas"
+              value="2"
+            />
+            <br />
+            <button
+              type="button"
+              onclick="calculatePurchase()"
+              class="button primary large"
+            >
+              Calcular Compra
+            </button>
+          </form>
+          <p id="resultado3"></p>
+          <script>
+            function calculatePurchase() {
+              let totalDaCompra = parseFloat(
+                document.getElementById("totalDaCompra").value
+              );
+              let quantidadeDeParcelas = parseInt(
+                document.getElementById("quantidadeDeParcelas").value
+              );
+              let valorDaParcela = totalDaCompra / quantidadeDeParcelas;
+              document.getElementById("resultado3").innerHTML =
+                "O valor total da compra foi R$" + totalDaCompra;
+              document.getElementById("resultado3").innerHTML +=
+                "<br>Forma de pagamento: " +
+                quantidadeDeParcelas +
+                "x de R$" +
+                valorDaParcela;
+            }
+          </script>
+          <p>
+            4. Crie duas variáveis. Na primeira, coloque um total de minutos e
+            defina um valor para ela (por exemplo, minutos = 120). Na segunda,
+            coloque o total em segundos desses minutos armazenados na primeira
+            variável. Apresente no documento HTML a seguinte informação: "_
+            minutos equivale a _ segundos!"
+          </p>
+          <form>
+            <label for="minutos">Minutos:</label>
+            <input
+              type="number"
+              id="minutos"
+              name="minutos"
+              value="120"
+            /><br />
+            <button
+              type="button"
+              onclick="convertMinutesToSeconds()"
+              class="button primary large"
+            >
+              Converter Minutos
+            </button>
+          </form>
+          <p id="resultado4"></p>
+          <script>
+            function convertMinutesToSeconds() {
+              let minutos = parseInt(document.getElementById("minutos").value);
+              let segundos = minutos * 60;
+              document.getElementById("resultado4").innerHTML =
+                minutos + " minutos equivalem a " + segundos + " segundos!";
+            }
+          </script>
+          <p>
+            5. Crie cinco variáveis. Na primeira, armazene o nome de um aluno.
+            Na segunda, terceira e quarta, coloque 3 notas (valores de 0 a 10).
+            Calcule a média das notas e armazene na quinta variável criada.
+            Apresente no documento HTML a seguinte informação: "O aluno _____
+            ficou com média _,_"
+          </p>
+          <form>
+            <label for="nomeAluno">Nome do Aluno:</label>
+            <input
+              type="text"
+              id="nomeAluno"
+              name="nomeAluno"
+              value="Douglas"
+            />
+            <br />
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" name="nota1" value="7" />
+            <br />
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" name="nota2" value="8" />
+            <br />
+            <label for="nota3">Nota 3:</label>
+            <input type="number" id="nota3" name="nota3" value="9" />
+            <br />
+            <button
+              type="button"
+              onclick="calculateAverage()"
+              class="button primary large"
+            >
+              Calcular Média
+            </button>
+          </form>
+          <p id="resultado5"></p>
+          <script>
+            function calculateAverage() {
+              let nomeAluno = document.getElementById("nomeAluno").value;
+              let nota1 = parseFloat(document.getElementById("nota1").value);
+              let nota2 = parseFloat(document.getElementById("nota2").value);
+              let nota3 = parseFloat(document.getElementById("nota3").value);
+
+              let media = (nota1 + nota2 + nota3) / 3;
+
+              document.getElementById("resultado5").innerHTML =
+                "O aluno " + nomeAluno + " ficou com média " + media;
+            }
+          </script>
+          <p>
+            6. Desenvolva um algoritmo que armazene o valor 10 em uma variável A
+            e o valor 20 em uma variável B. A seguir (utilizando apenas
+            atribuições entre variáveis) troque os seus conteúdos, fazendo com
+            que o valor que está em A passe para B e vice-versa. Ao final,
+            escrever os valores que ficaram armazenados nas variáveis.
+          </p>
+          <form>
+            <label for="valorA">Valor de A:</label>
+            <input type="number" id="valorA" name="valorA" value="10" />
+            <br />
+            <label for="valorB">Valor de B:</label>
+            <input type="number" id="valorB" name="valorB" value="20" />
+            <br />
+            <button
+              type="button"
+              onclick="swapValues()"
+              class="button primary large"
+            >
+              Trocar Valores
+            </button>
+          </form>
+          <p id="resultado6"></p>
+          <script>
+            function swapValues() {
+              let A = parseInt(document.getElementById("valorA").value);
+              let B = parseInt(document.getElementById("valorB").value);
+
+              let temp = A;
+              A = B;
+              B = temp;
+
+              document.getElementById("resultado6").innerHTML =
+                "Valor de A: " + A + "<br> Valor de B: " + B;
+            }
+          </script>
+          <p>
+            7. Desenvolva um algoritmo para ler o número total de eleitores de
+            um município, o número de votos brancos, nulos e válidos. Calcule e
+            escreva o percentual que cada um representa em relação ao total de
+            eleitores.
+          </p>
+          <form>
+            <label for="totalEleitores">Número total de eleitores:</label>
+            <input type="number" id="totalEleitores" name="totalEleitores" />
+            <br />
+            <label for="votosBrancos">Número de votos em branco:</label>
+            <input type="number" id="votosBrancos" name="votosBrancos" />
+            <br />
+            <label for="votosNulos">Número de votos nulos:</label>
+            <input type="number" id="votosNulos" name="votosNulos" />
+            <br />
+            <button
+              type="button"
+              onclick="calculatePercentages()"
+              class="button primary large"
+            >
+              Calcular Percentagens
+            </button>
+          </form>
+          <p id="resultado7"></p>
+          <script>
+            function calculatePercentages() {
+              let totalEleitores = parseInt(
+                document.getElementById("totalEleitores").value
+              );
+              let votosBrancos = parseInt(
+                document.getElementById("votosBrancos").value
+              );
+              let votosNulos = parseInt(
+                document.getElementById("votosNulos").value
+              );
+              let votosValidos = totalEleitores - (votosBrancos + votosNulos);
+
+              let percentualBrancos = (votosBrancos / totalEleitores) * 100;
+              let percentualNulos = (votosNulos / totalEleitores) * 100;
+              let percentualValidos = (votosValidos / totalEleitores) * 100;
+
+              let resultado =
+                "Percentual de votos em branco: " +
+                percentualBrancos.toFixed(2) +
+                "%<br>";
+              resultado +=
+                "Percentual de votos nulos: " +
+                percentualNulos.toFixed(2) +
+                "%<br>";
+              resultado +=
+                "Percentual de votos válidos: " +
+                percentualValidos.toFixed(2) +
+                "%";
+              document.getElementById("resultado7").innerHTML = resultado;
+            }
+          </script>
+          <p>
+            8. Desenvolva um algoritmo para ler dois valores e imprimir uma das
+            três mensagens a seguir: a. ‘Números iguais’, caso os números sejam
+            iguais; b. ‘Primeiro é maior’, caso o primeiro seja maior que o
+            segundo; c. ‘Segundo é maior’, caso o segundo seja maior que o
+            primeiro.
+          </p>
+          <form>
+            <label for="valor1">Digite o primeiro valor:</label>
+            <input type="number" id="valor1" name="valor1" />
+            <br />
+            <label for="valor2">Digite o segundo valor:</label>
+            <input type="number" id="valor2" name="valor2" />
+            <br />
+            <button
+              type="button"
+              onclick="compareValues()"
+              class="button primary large"
+            >
+              Comparar Valores
+            </button>
+          </form>
+          <p id="resultado8"></p>
+          <script>
+            function compareValues() {
+              let valor1 = parseFloat(document.getElementById("valor1").value);
+              let valor2 = parseFloat(document.getElementById("valor2").value);
+
+              if (valor1 === valor2) {
+                document.getElementById("resultado8").innerHTML =
+                  "Números iguais";
+              } else if (valor1 > valor2) {
+                document.getElementById("resultado8").innerHTML =
+                  "Primeiro é maior";
+              } else {
+                document.getElementById("resultado8").innerHTML =
+                  "Segundo é maior";
+              }
+            }
+          </script>
+          <p>
+            9. As maçãs desta estação custam R$0,30 se forem compradas menos do
+            que uma dúzia, e R$0,25 se forem compradas pelo menos doze.
+            Desenvolva um algoritmo que leia o número de maçãs compradas,
+            calcule e escreva o valor total da compra.
+          </p>
+          <form>
+            <label for="quantidadeDeMacas"
+              >Quantidade de maçãs compradas:</label
+            >
+            <input
+              type="number"
+              id="quantidadeDeMacas"
+              name="quantidadeDeMacas"
+            />
+            <br />
+            <button
+              class="button primary large"
+              type="button"
+              onclick="calculatePurchase()"
+            >
+              Calcular Compra
+            </button>
+          </form>
+          <p id="resultado9"></p>
+          <script>
+            function calculatePurchase() {
+              let quantidadeDeMacas = parseInt(
+                document.getElementById("quantidadeDeMacas").value
+              );
+              let precoPorDuzia = 0.25;
+              let precoPorUnidade = 0.3;
+              let valorTotal;
+
+              if (quantidadeDeMacas >= 12) {
+                valorTotal = quantidadeDeMacas * precoPorDuzia;
+              } else {
+                valorTotal = quantidadeDeMacas * precoPorUnidade;
+              }
+
+              document.getElementById("resultado9").innerHTML =
+                "O valor total da compra é R$" + valorTotal.toFixed(2);
+            }
+          </script>
+          <p>
+            10. Escreva um algoritmo que tenha como valores de entrada o nome e
+            idade do usuário e imprima no terminal o nome, a idade e o ano de
+            nascimento do usuário. Ex: “Nome: Pedro, Idade: 22 anos, nasceu em
+            2000”. OBS: Pegue o ano atual como base.
+          </p>
+          <form>
+            <label for="nome">Digite o seu nome:</label>
+            <input type="text" id="nome" name="nome" />
+            <br />
+            <label for="idade2">Digite a sua idade:</label>
+            <input type="number" id="idade2" name="idade" />
+            <br />
+            <button
+              class="button primary large"
+              type="button"
+              onclick="calculateYearOfBirth()"
+            >
+              Calcular Ano de Nascimento
+            </button>
+          </form>
+          <p id="resultado10"></p>
+          <script>
+            function calculateYearOfBirth() {
+              let nome = document.getElementById("nome").value;
+              let idade2 = parseInt(document.getElementById("idade2").value);
+              let anoAtual = 2023;
+              let anoNascimento2 = anoAtual - idade2;
+
+              document.getElementById("resultado10").innerHTML =
+                "Nome: " +
+                nome +
+                ", Idade: " +
+                idade2 +
+                " anos, nasceu em " +
+                anoNascimento2;
+            }
+          </script>
+          <p>
+            11. Crie um algoritmo que armazene um número inteiro positivo e gere
+            um alerta com as seguintes mensagens: a. “Número é par!”, se o valor
+            armazenado for par; b. “Número é ímpar!”, se o valor armazenado for
+            ímpar.
+          </p>
+          <form>
+            <label for="numero">Digite um número inteiro positivo:</label>
+            <input type="number" id="numero" name="numero" />
+            <br />
+            <button
+              class="button primary large"
+              type="button"
+              onclick="checkEvenOdd()"
+            >
+              Verificar Paridade
+            </button>
+          </form>
+          <p id="resultado11"></p>
+          <script>
+            function checkEvenOdd() {
+              let numero = parseInt(document.getElementById("numero").value);
+
+              if (numero % 2 === 0) {
+                document.getElementById("resultado11").innerHTML =
+                  "Número é par!";
+              } else {
+                document.getElementById("resultado11").innerHTML =
+                  "Número é ímpar!";
+              }
+            }
+          </script>
+          <p>
+            12. Escreva um algoritmo que armazene o ano atual e o ano de
+            nascimento de uma pessoa. Escreva uma mensagem no console que diga
+            se ela poderá ou não votar este ano (não é necessário considerar o
+            mês em que a pessoa nasceu).
+          </p>
+          <form>
+            <label for="anoNascimento">Digite o ano de nascimento:</label>
+            <input type="number" id="anoNascimento" name="anoNascimento" />
+            <br />
+            <button
+              class="button primary large"
+              type="button"
+              onclick="checkVotingEligibility()"
+            >
+              Verificar Elegibilidade de Voto
+            </button>
+          </form>
+          <p id="resultado12"></p>
+          <script>
+            function checkVotingEligibility() {
+              let anoAtual = 2023;
+              let anoNascimento = parseInt(
+                document.getElementById("anoNascimento").value
+              );
+              let idade = anoAtual - anoNascimento;
+
+              if (idade >= 16) {
+                document.getElementById("resultado12").innerHTML =
+                  "A pessoa pode votar este ano.";
+              } else {
+                document.getElementById("resultado12").innerHTML =
+                  "A pessoa não pode votar este ano.";
+              }
+            }
+          </script>
+        </div>
+      </section>
+      <section id="second">
+        <header>
+          <h2>Atividade Prática - Lógica simples e estruturas condicionais</h2>
+          <ul class="actions">
+            <li>
+              <a href="#third" class="arrow scrolly"
+                ><span class="label">Next</span></a
+              >
+            </li>
+          </ul>
+        </header>
+        <div class="content">
+          <p>
+            1. Escreva um algoritmo para ler uma temperatura em graus Celsius,
+            calcular e escrever o valor correspondente em graus Fahrenheit.
+          </p>
+
+          <form id="temperatureForm">
+            <label for="celsiusInput"
+              >Digite a temperatura em graus Celsius:</label
+            >
+            <input
+              type="number"
+              id="celsiusInput"
+              name="celsiusInput"
+              required
+            />
+            <br />
+            <button
+              class="button primary large"
+              type="button"
+              onclick="convertTemperature()"
+            >
+              Converter
+            </button>
+          </form>
+          <div id="resultDiv"></div>
+          <script>
+            function convertTemperature() {
+              const celsiusInput =
+                document.getElementById("celsiusInput").value;
+              const temperaturaFahrenheit = (celsiusInput * 9) / 5 + 32;
+              const resultDiv = document.getElementById("resultDiv");
+              resultDiv.innerHTML = `${celsiusInput} Graus Celsius são ${temperaturaFahrenheit.toFixed(
+                2
+              )} Graus Fahrenheit.`;
+            }
+          </script>
+          <p>
+            2. Crie um programa que peça um número de 1 a 7 e exiba o dia da
+            semana correspondente utilizando a estrutura condicional switch.
+          </p>
+          <form id="dayForm">
+            <label for="dayInput">Digite um número de 1 a 7:</label>
+            <input type="number" id="dayInput" name="dayInput" required />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="getDayOfWeek()"
+            >
+              Obter Dia
+            </button>
+          </form>
+          <div id="resultDiv2"></div>
+          <script>
+            function getDayOfWeek() {
+              const dayInput = document.getElementById("dayInput").value;
+              let dayOfWeek = "";
+
+              switch (parseInt(dayInput)) {
+                case 1:
+                  dayOfWeek = "segunda-feira";
+                  break;
+                case 2:
+                  dayOfWeek = "terça-feira";
+                  break;
+                case 3:
+                  dayOfWeek = "quarta-feira";
+                  break;
+                case 4:
+                  dayOfWeek = "quinta-feira";
+                  break;
+                case 5:
+                  dayOfWeek = "sexta-feira";
+                  break;
+                case 6:
+                  dayOfWeek = "sábado";
+                  break;
+                case 7:
+                  dayOfWeek = "domingo";
+                  break;
+                default:
+                  dayOfWeek = "dia inválido";
+                  break;
+              }
+
+              const resultDiv2 = document.getElementById("resultDiv2");
+              resultDiv2.innerHTML = `O dia da semana correspondente ao número ${dayInput} é: ${dayOfWeek}.`;
+            }
+          </script>
+          <p>
+            3. Crie um programa que peça um número e verifique se ele é
+            positivo, negativo ou zero.
+          </p>
+          <form id="numberForm">
+            <label for="numberInput">Digite um número:</label>
+            <input type="number" id="numberInput" name="numberInput" required />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="checkNumber()"
+            >
+              Verificar Número
+            </button>
+          </form>
+          <div id="resultDiv3"></div>
+          <script>
+            function checkNumber() {
+              const numberInput = document.getElementById("numberInput").value;
+              const resultDiv3 = document.getElementById("resultDiv3");
+
+              if (numberInput > 0) {
+                resultDiv3.innerHTML = "O número é positivo.";
+              } else if (numberInput < 0) {
+                resultDiv3.innerHTML = "O número é negativo.";
+              } else {
+                resultDiv3.innerHTML = "O número é zero.";
+              }
+            }
+          </script>
+          <p>
+            4. O custo de um carro novo ao consumidor é a soma do custo de
+            fábrica com a porcentagem do distribuidor e dos impostos (aplicados
+            ao custo de fábrica). Supondo que o percentual do distribuidor seja
+            de 28% e os impostos de 45%, escrever um algoritmo para ler o custo
+            de fábrica de um carro, calcular e escrever o custo final ao
+            consumidor.
+          </p>
+          <form id="carCostForm">
+            <label for="carCostInput">Digite o valor do carro:</label>
+            <input
+              type="number"
+              step="0.01"
+              id="carCostInput"
+              name="carCostInput"
+              required
+            />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="calculateCarCost()"
+            >
+              Calcular Custo
+            </button>
+          </form>
+          <div id="resultDiv4"></div>
+          <script>
+            function calculateCarCost() {
+              const carCostInput = parseFloat(
+                document.getElementById("carCostInput").value
+              );
+              const custoDistribuidor = carCostInput * 0.28;
+              const valorImposto = carCostInput * 0.45;
+              const custoFinal =
+                carCostInput + custoDistribuidor + valorImposto;
+
+              const resultDiv4 = document.getElementById("resultDiv4");
+              resultDiv4.innerHTML = `O custo final do carro é: R$${custoFinal.toFixed(
+                2
+              )}`;
+            }
+          </script>
+          <p>
+            5. Desenvolva um algoritmo que faça o cálculo do índice de massa
+            corporal de uma pessoa. Esse algoritmo deve solicitar ao usuário que
+            digite sua altura, em seguida solicitar que digite seu peso e que
+            lhe exiba o status. O status vai variar da seguinte forma: <br />a.
+            Se o IMC for menor que 18,5 o status a ser mostrado deve ser "Você
+            está abaixo da faixa de peso ideal"; <br />b. Se o IMC estiver acima
+            de 24,99 o status a ser mostrado será "Você está acima da faixa de
+            peso ideal"; <br />c. Se o IMC for igual ou maior que 18,5 e igual
+            ou menor que 24,99, o status a ser mostrado será "Você está dentro
+            da faixa de peso ideal".
+          </p>
+          <form id="bmiForm">
+            <label for="heightInput">Digite sua altura em metros:</label>
+            <input
+              type="number"
+              step="0.01"
+              id="heightInput"
+              name="heightInput"
+              required
+            />
+            <br />
+            <label for="weightInput">Digite seu peso em quilos:</label>
+            <input
+              type="number"
+              step="0.01"
+              id="weightInput"
+              name="weightInput"
+              required
+            />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="calculateBMI()"
+            >
+              Calcular IMC
+            </button>
+          </form>
+          <div id="resultDiv5"></div>
+          <div id="imcDiv"></div>
+          <script>
+            function calculateBMI() {
+              const heightInput = parseFloat(
+                document.getElementById("heightInput").value
+              );
+              const weightInput = parseFloat(
+                document.getElementById("weightInput").value
+              );
+
+              const imc = weightInput / (heightInput * heightInput);
+
+              const resultDiv5 = document.getElementById("resultDiv5");
+              const imcDiv = document.getElementById("imcDiv");
+
+              if (imc < 18.5) {
+                resultDiv5.innerHTML =
+                  "Você está abaixo da faixa de peso ideal.";
+              } else if (imc > 24.99) {
+                resultDiv5.innerHTML =
+                  "Você está acima da faixa de peso ideal.";
+              } else {
+                resultDiv5.innerHTML =
+                  "Você está dentro da faixa de peso ideal.";
+              }
+
+              imcDiv.innerHTML = `Seu IMC é: ${imc.toFixed(2)}`;
+            }
+          </script>
+          <p>
+            6. Escreva um algoritmo que solicite 2 números e uma operação
+            matemática. O algoritmo deve realizar o cálculo com os 2 números
+            digitados conforme a operação informada.
+          </p>
+          <form id="calculatorForm">
+            <label for="number1">Digite o primeiro número:</label>
+            <input
+              type="number"
+              step="0.01"
+              id="number1"
+              name="number1"
+              required
+            />
+            <br />
+            <label for="operator">Digite o operador (+, -, *, /):</label>
+            <input type="text" id="operator" name="operator" required />
+            <br />
+            <label for="number2">Digite o segundo número:</label>
+            <input
+              type="number"
+              step="0.01"
+              id="number2"
+              name="number2"
+              required
+            />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="calculate()"
+            >
+              Calcular
+            </button>
+          </form>
+          <div id="resultDiv6"></div>
+          <script>
+            function calculate() {
+              const number1 = parseFloat(
+                document.getElementById("number1").value
+              );
+              const operator = document.getElementById("operator").value;
+              const number2 = parseFloat(
+                document.getElementById("number2").value
+              );
+
+              let result;
+
+              switch (operator) {
+                case "+":
+                  result = number1 + number2;
+                  break;
+                case "-":
+                  result = number1 - number2;
+                  break;
+                case "*":
+                  result = number1 * number2;
+                  break;
+                case "/":
+                  result = number1 / number2;
+                  break;
+                default:
+                  result = "Operador inválido";
+                  break;
+              }
+
+              const resultDiv6 = document.getElementById("resultDiv6");
+              resultDiv6.innerHTML = "Resultado: " + result;
+            }
+          </script>
+          <p>
+            7. Faça um algoritmo que simule um caixa eletrônico. Nesse algoritmo
+            a conta do usuário deve ser criada já com um saldo positivo. O
+            usuário precisa informar a quantidade de dinheiro que deseja
+            retirar, esse valor deve ser um número positivo, múltiplo de 5 e
+            menor do que o saldo. Cada saque eletrônico cobra uma taxa de
+            R$4.50. Ao final deve ser informado o saldo da conta caso dê tudo
+            certo com o saque, e se o usuário informar um valor maior que o
+            saldo deve ser informado ao usuário que o mesmo não tem dinheiro
+            suficiente em conta para realizar o saque. <br />OBS: Na verificação
+            se o valor do saque é maior que o saldo deve ser considerado e
+            também contabilizado o valor da taxa a ser cobrada pelo saque. Ou
+            seja, o valor a ser sacado somado ao valor da taxa do saque não pode
+            ser maior que o saldo disponível.
+          </p>
+          <form id="atmForm">
+            <label for="withdrawAmount"
+              >Digite o valor que deseja sacar (múltiplo de 5):</label
+            >
+            <input
+              type="number"
+              id="withdrawAmount"
+              name="withdrawAmount"
+              step="5"
+              min="5"
+              required
+            />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="simulateWithdrawal()"
+            >
+              Sacar
+            </button>
+          </form>
+          <div id="withdrawalResult"></div>
+          <div id="saldoDiv"></div>
+          <script>
+            let saldo = 1000;
+            const taxaSaque = 4.5;
+            const saldoDiv = document.getElementById("saldoDiv");
+            saldoDiv.innerHTML = `Saldo disponível: R$${saldo.toFixed(2)}`;
+
+            function simulateWithdrawal() {
+              const withdrawAmount = parseFloat(
+                document.getElementById("withdrawAmount").value
+              );
+
+              if (withdrawAmount > 0 && withdrawAmount % 5 === 0) {
+                const valorTotalSaque = withdrawAmount + taxaSaque;
+
+                if (valorTotalSaque <= saldo) {
+                  saldo -= valorTotalSaque;
+                  const withdrawalResult =
+                    document.getElementById("withdrawalResult");
+                  withdrawalResult.innerHTML = `<h5>Saque de <span style="color:rgb(2, 28, 92);">R$${withdrawAmount.toFixed(
+                    2
+                  )}</span> efetuado com sucesso.`;
+                  withdrawalResult.innerHTML += `<br><h6>Taxa de saque: R$${taxaSaque.toFixed(
+                    2
+                  )}</h6>`;
+                  saldoDiv.innerHTML = `<h6>Saldo disponível: R$${saldo.toFixed(
+                    2
+                  )}</h6>`;
+                } else {
+                  const withdrawalResult =
+                    document.getElementById("withdrawalResult");
+                  withdrawalResult.innerHTML =
+                    "Você não possui saldo suficiente.";
+                }
+              } else {
+                const withdrawalResult =
+                  document.getElementById("withdrawalResult");
+                withdrawalResult.innerHTML =
+                  "Valor de saque inválido. Certifique-se de que seja um número múltiplo de 5.";
+              }
+            }
+          </script>
+          <p>
+            8. Faça um algoritmo que leia a idade e peso de um atleta e imprima
+            a sua categoria, de acordo com a seguinte tabela:
+          </p>
+          <table>
+            <tr>
+              <th>Idade</th>
+              <th>Peso</th>
+              <th>Categoria</th>
+            </tr>
+            <tr>
+              <td>Até 12 anos</td>
+              <td>-</td>
+              <td>Infantil</td>
+            </tr>
+            <tr>
+              <td>13 a 16 anos</td>
+              <td>Até 40kg</td>
+              <td>Juvenil leve</td>
+            </tr>
+            <tr>
+              <td>13 a 16 anos</td>
+              <td>Acima de 40kg</td>
+              <td>Juvenil pesado</td>
+            </tr>
+            <tr>
+              <td>17 a 24 anos</td>
+              <td>Até 45kg</td>
+              <td>Sênior leve</td>
+            </tr>
+            <tr>
+              <td>17 a 24 anos</td>
+              <td>Acima de 45kg até 60kg</td>
+              <td>Sênior médio</td>
+            </tr>
+            <tr>
+              <td>17 a 24 anos</td>
+              <td>Acima de 60kg</td>
+              <td>Sênior pesado</td>
+            </tr>
+            <tr>
+              <td>Acima de 24 anos</td>
+              <td>-</td>
+              <td>Veterano</td>
+            </tr>
+          </table>
+
+          <form id="athleteForm">
+            <label for="idade">Qual é a sua idade?</label>
+            <input type="number" id="idade" name="idade" required />
+            <br />
+            <label for="peso">Quanto você pesa (em kg)?</label>
+            <input type="number" id="peso" name="peso" required />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="categorizeAthlete()"
+            >
+              Categorizar
+            </button>
+          </form>
+          <div id="categoriaDiv"></div>
+          <script>
+            function categorizeAthlete() {
+              const idade = parseInt(document.getElementById("idade").value);
+              const peso = parseFloat(document.getElementById("peso").value);
+              const categoriaDiv = document.getElementById("categoriaDiv");
+
+              let categoria = "";
+              let categoriaPeso = "";
+
+              if (idade <= 12) {
+                categoria = "Infantil";
+                categoriaPeso = peso;
+              } else if (idade > 12 && idade <= 16) {
+                categoria = "Juvenil";
+
+                if (peso <= 40) {
+                  categoriaPeso = peso;
+                  categoria = "Juvenil leve";
+                } else {
+                  categoriaPeso = peso;
+                  categoria = "Juvenil pesado";
+                }
+              } else if (idade >= 17 && idade <= 24) {
+                categoria = "Sênior";
+
+                if (peso <= 45) {
+                  categoriaPeso = peso;
+                  categoria = "Sênior leve";
+                } else if (peso >= 45 && peso <= 60) {
+                  categoriaPeso = peso;
+                  categoria = "Sênior médio";
+                } else {
+                  categoriaPeso = peso;
+                  categoria = "Sênior pesado";
+                }
+              } else {
+                categoria = "Veterano";
+                categoriaPeso = peso;
+              }
+
+              categoriaDiv.innerHTML = `<h5>Seu peso é ${categoriaPeso} kg. Sua categoria é ${categoria}.</h5>`;
+            }
+          </script>
+          <p>
+            9. Escreva um programa que pergunte a velocidade de um carro. Caso
+            ultrapasse 80Km/h, exiba uma mensagem dizendo que o usuário foi
+            multado. Nesse caso, exiba o valor da multa, cobrando R$5 por cada
+            km acima da velocidade permitida.
+          </p>
+          <form id="speedingForm">
+            <label for="velocidadeCarro"
+              >Digite a velocidade do carro (em Km/h):</label
+            >
+            <input
+              type="number"
+              id="velocidadeCarro"
+              name="velocidadeCarro"
+              required
+            />
+            <br />
+            <button
+              type="button"
+              class="button primary large"
+              onclick="checkSpeeding()"
+            >
+              Verificar Velocidade
+            </button>
+          </form>
+          <div id="resultadoDiv9"></div>
+          <script>
+            function checkSpeeding() {
+              const velocidadeCarro = parseInt(
+                document.getElementById("velocidadeCarro").value
+              );
+              const resultadoDiv9 = document.getElementById("resultadoDiv9");
+
+              if (velocidadeCarro > 80) {
+                const velocidadeExcedida = velocidadeCarro - 80;
+                const valorMulta = velocidadeExcedida * 5;
+
+                resultadoDiv9.innerHTML =
+                  "Você foi multado por excesso de velocidade!";
+                resultadoDiv9.innerHTML += `<h5><br>Velocidade excedida: <span style="color:rgb(2, 28, 92);">${velocidadeExcedida} Km/h</span></h5>`;
+                resultadoDiv9.innerHTML += `<br>Valor da multa: <strong>R$${valorMulta.toFixed(
+                  2
+                )}</strong>`;
+              } else {
+                resultadoDiv9.innerHTML =
+                  "Você está dentro do limite de velocidade permitido.";
+              }
+            }
+          </script>
+        </div>
+      </section>
+      <section id="third">
+        <header><h2>Atividade Prática - Estruturas de Repetição</h2></header>
+        <div class="content">
+          <p>
+            1. Desenvolva um algoritmo que leia a altura de 15 pessoas. Este
+            programa deverá calcular e mostrar: a. A menor altura do grupo; b. A
+            maior altura do grupo;
+          </p>
+          <button
+            type="button"
+            class="button primary large marginbt2"
+            onclick="iniciarExercicio()"
+          >
+            Iniciar Exercício
+          </button>
+
+          <script>
+            function iniciarExercicio() {
+              let menorAltura = 1000;
+              let maiorAltura = 0;
+              let exercicioAtual = 1;
+
+              function coletarAltura() {
+                const altura = parseFloat(
+                  prompt(`Digite a altura para o Exercício ${exercicioAtual}:`)
+                );
+
+                if (!isNaN(altura)) {
+                  if (altura < menorAltura) {
+                    menorAltura = altura;
+                  }
+
+                  if (altura > maiorAltura) {
+                    maiorAltura = altura;
+                  }
+
+                  if (exercicioAtual < 15) {
+                    exercicioAtual++;
+                    coletarAltura();
+                  } else {
+                    alert(
+                      `Todas as 15 alturas foram coletadas. Menor altura: ${menorAltura}, Maior altura: ${maiorAltura}`
+                    );
+                  }
+                } else {
+                  alert("Altura inválida. Por favor, digite um número válido.");
+                }
+              }
+
+              coletarAltura();
+            }
+          </script>
+
+          <p>
+            2. Pedro tem 1,50m de altura e cresce 2 centímetros por ano,
+            enquanto Lucas tem 1,10m de altura e cresce 3 centímetros por ano.
+            Construa um algoritmo que calcule e imprima quantos anos serão
+            necessários para que: a. Lucas e Pedro tenham o mesmo tamanho; b.
+            Lucas seja maior que Pedro.
+          </p>
+          <form id="alturaForm" onsubmit="calcularCrescimento(event)">
+            <label for="alturaPedro"
+              >Altura inicial de Pedro (em centímetros):</label
+            >
+            <input type="number" id="alturaPedro" required />
+            <br />
+
+            <label for="crescimentoPedro"
+              >Taxa de crescimento de Pedro (em centímetros por ano):</label
+            >
+            <input type="number" id="crescimentoPedro" required />
+            <br />
+
+            <label for="alturaLucas"
+              >Altura inicial de Lucas (em centímetros):</label
+            >
+            <input type="number" id="alturaLucas" required />
+            <br />
+
+            <label for="crescimentoLucas"
+              >Taxa de crescimento de Lucas (em centímetros por ano):</label
+            >
+            <input type="number" id="crescimentoLucas" required />
+            <br />
+
+            <button type="submit" class="button primary large">Calcular</button>
+          </form>
+
+          <div id="resultadoCrescimento"></div>
+
+          <script>
+            let resultCounter = 0;
+
+            function calcularCrescimento(event) {
+              event.preventDefault();
+
+              let alturaPedro = parseFloat(
+                document.getElementById("alturaPedro").value
+              );
+              let crescimentoPedro = parseFloat(
+                document.getElementById("crescimentoPedro").value
+              );
+              let alturaLucas = parseFloat(
+                document.getElementById("alturaLucas").value
+              );
+              let crescimentoLucas = parseFloat(
+                document.getElementById("crescimentoLucas").value
+              );
+              let anos = 0;
+
+              while (alturaLucas < alturaPedro) {
+                alturaPedro += crescimentoPedro;
+                alturaLucas += crescimentoLucas;
+                anos++;
+              }
+
+              resultCounter++;
+              const resultadoDiv = document.getElementById(
+                "resultadoCrescimento"
+              );
+              const resultId = `resultado-${resultCounter}`;
+              resultadoDiv.innerHTML += `<div id="${resultId}">Levará ${anos} anos para Lucas e Pedro terem a mesma altura.</div>`;
+
+              // Calculate how many years it will take for Lucas to be taller than Pedro
+              alturaPedro = parseFloat(
+                document.getElementById("alturaPedro").value
+              );
+              alturaLucas = parseFloat(
+                document.getElementById("alturaLucas").value
+              );
+              anos = 0;
+
+              while (alturaLucas <= alturaPedro) {
+                alturaPedro += crescimentoPedro;
+                alturaLucas += crescimentoLucas;
+                anos++;
+              }
+
+              resultadoDiv.innerHTML += `<div id="${resultId}-lucas-maior">Levará ${anos} anos para Lucas ser maior que Pedro.</div>`;
+            }
+          </script>
+          <p>
+            3. Escreva um algoritmo que faça a tabuada de um número e apresente
+            o resultado de acordo com o modelo a seguir, sabendo que o
+            multiplicando deverá ser fornecido pelo usuário (n) e a quantidade
+            de iterações também (i). 1 * 2 = 2 2 * 2 = 4 3 * 2 = 6 ...
+          </p>
+          <form id="tabuadaForm" onsubmit="gerarTabuada(event)">
+            <label for="multiplicando">Digite o número para a tabuada:</label>
+            <input type="number" id="multiplicando" required />
+            <br />
+
+            <label for="vezes">Digite a quantidade de vezes:</label>
+            <input type="number" id="vezes" required />
+            <br />
+
+            <button type="submit" class="button primary large">
+              Gerar Tabuada
+            </button>
+          </form>
+
+          <div id="resultadoTabuada"></div>
+
+          <script>
+            function gerarTabuada(event) {
+              event.preventDefault();
+
+              const multiplicando = parseInt(
+                document.getElementById("multiplicando").value
+              );
+              const vezes = parseInt(document.getElementById("vezes").value);
+
+              if (isNaN(multiplicando) || isNaN(vezes)) {
+                document.getElementById("resultadoTabuada").textContent =
+                  "Insira números válidos.";
+              } else {
+                let tabuada = "";
+
+                for (let i = 1; i <= vezes; i++) {
+                  const resultado = multiplicando * i;
+                  tabuada += `${multiplicando} x ${i} = ${resultado} <br>`;
+                }
+
+                document.getElementById("resultadoTabuada").innerHTML = tabuada;
+              }
+            }
+          </script>
+          <p>
+            4. Escreva um algoritmo que percorra os números inteiros entre 1 e
+            250 e verifique quais números são múltiplos de 3 e quais são
+            múltiplos de 5.
+          </p>
+          <form id="multiplesForm">
+            <label for="start">Início:</label>
+            <input
+              type="number"
+              id="start"
+              name="start"
+              min="1"
+              max="250"
+              required
+            />
+            <br />
+
+            <label for="end">Fim:</label>
+            <input
+              type="number"
+              id="end"
+              name="end"
+              min="1"
+              max="250"
+              required
+            />
+
+            <br />
+
+            <button type="submit" class="button primary large">
+              Verificar Múltiplos
+            </button>
+          </form>
+
+          <div id="results"></div>
+
+          <script>
+            document
+              .getElementById("multiplesForm")
+              .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const start = parseInt(document.getElementById("start").value);
+                const end = parseInt(document.getElementById("end").value);
+
+                if (start <= end) {
+                  let resultHtml = "";
+                  for (let i = start; i <= end; i++) {
+                    if (i % 3 === 0) {
+                      resultHtml += `<span style="color:red">${i} é múltiplo de 3<br></span>`;
+                    } else if (i % 5 === 0) {
+                      resultHtml += `<span style="color:blue">${i} é múltiplo de 5<br></span>`;
+                    }
+                  }
+
+                  document.getElementById("results").innerHTML = resultHtml;
+                } else {
+                  alert(
+                    "O valor de Início deve ser menor ou igual ao valor de Fim."
+                  );
+                }
+              });
+          </script>
+          <p>
+            5. Faça um programa usando a estrutura “for” que leia um número
+            inteiro positivo e mostre na tela uma contagem de 0 até o valor
+            digitado: Ex: Digite um valor: 9 Contagem: 0, 1, 2, 3, 4, 5, 6, 7,
+            8, 9, FIM!
+          </p>
+          <form id="countForm">
+            <label for="value">Digite um valor:</label>
+            <input type="number" id="value" name="value" required />
+            <br />
+
+            <!-- Substitua o elemento de entrada por um elemento de botão -->
+            <button type="button" class="button primary large" id="countButton">
+              Contar Números
+            </button>
+          </form>
+          <div id="result"></div>
+          <script>
+            // Adicione um ouvinte de evento ao elemento de botão
+            document
+              .getElementById("countButton")
+              .addEventListener("click", function () {
+                const value = parseInt(document.getElementById("value").value);
+
+                if (!isNaN(value) && value >= 0) {
+                  let count = "Contagem: ";
+                  for (let i = 0; i <= value; i++) {
+                    count += i;
+                    if (i < value) {
+                      count += ", ";
+                    }
+                  }
+                  count += ", FIM!";
+                  document.getElementById("result").textContent = count;
+                } else {
+                  document.getElementById("result").textContent =
+                    "Por favor, digite um número inteiro positivo.";
+                }
+              });
+          </script>
+          <p>
+            6. Desenvolva um algoritmo que mostre uma contagem regressiva de 30
+            até 1, marcando os números que forem primos, exatamente como
+            mostrado abaixo: 30 [29] 28 27 26 25 24 [23] 22 21 20 [19] 18 [17]
+            16...
+          </p>
+          <form>
+            <label for="number">Digite um numero:</label>
+            <input type="number" id="number" name="number" />
+            <button
+              type="button"
+              onclick="checkPrime()"
+              class="button primary large"
+            >
+              Checar os numeros primos
+            </button>
+          </form>
+
+          <div id="resultprimo"></div>
+
+          <script>
+            function checkPrime() {
+              let numero = Number(document.getElementById("number").value);
+              let result = "";
+
+              for (let i = numero; i >= 1; i--) {
+                let isPrime = true;
+
+                if (i <= 3) {
+                  isPrime = true;
+                } else if (i % 2 === 0 || i % 3 === 0) {
+                  isPrime = false;
+                }
+
+                result += isPrime ? ` [${i}] ` : `${i} `;
+              }
+
+              document.getElementById("resultprimo").textContent = result;
+            }
+          </script>
+          <p>
+            7. Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+            média aritmética dos valores lidos, a quantidade de valores
+            positivos, a quantidade de valores negativos e o percentual de
+            valores negativos e positivos.
+          </p>
+          <button id="exerciseButton" class="button primary large">
+            Iniciar
+          </button>
+
+          <script>
+            function performExercise() {
+              let soma = 0;
+              let qtdPositivos = 0;
+              let qtdNegativos = 0;
+
+              for (let i = 1; i <= 10; i++) {
+                let numero = parseFloat(prompt(`Digite o ${i}º número:`));
+
+                soma += numero;
+
+                if (numero > 0) {
+                  qtdPositivos++;
+                } else if (numero < 0) {
+                  qtdNegativos++;
+                }
+              }
+
+              let media = soma / 10;
+              let percentualPositivos = (qtdPositivos / 10) * 100;
+              let percentualNegativos = (qtdNegativos / 10) * 100;
+
+              let resultMessage =
+                `Média aritmética: ${media}\n` +
+                `Quantidade de valores positivos: ${qtdPositivos}\n` +
+                `Quantidade de valores negativos: ${qtdNegativos}\n` +
+                `Porcentagem de valores positivos: ${percentualPositivos}%\n` +
+                `Porcentagem de valores negativos: ${percentualNegativos}%`;
+
+              alert(resultMessage);
+            }
+
+            // Add a click event handler to the button
+            document
+              .getElementById("exerciseButton")
+              .addEventListener("click", performExercise);
+          </script>
+        </div>
+      </section>
+      <section>
+        <header>
+          <h2>Contato</h2>
+        </header>
+        <div class="content">
+          <p></p>
+          <form>
+            <div class="fields">
+              <div class="field half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="field half">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="field">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  rows="7"
+                ></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input
+                  type="submit"
+                  value="Send Message"
+                  class="button primary"
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <footer>
+          <ul class="items">
+            <li>
+              <h3>Email</h3>
+              <a href="#">foxgoldseller@gmail.com</a>
+            </li>
+            <li>
+              <h3>Phone</h3>
+              <a href="#">(51) 985590-976</a>
+            </li>
+
+            <li>
+              <h3>Elsewhere</h3>
+              <ul class="icons">
+                <li>
+                  <a href="#" class="icon brands fa-twitter"
+                    ><span class="label">Twitter</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-facebook-f"
+                    ><span class="label">Facebook</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-instagram"
+                    ><span class="label">Instagram</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-linkedin-in"
+                    ><span class="label">LinkedIn</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-github"
+                    ><span class="label">GitHub</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-codepen"
+                    ><span class="label">Codepen</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Copyright -->
+      <div class="copyright">
+        &copy; Douglas Santos. All rights reserved. Design:
+        <a href="https://github.com/thefoxdeveloper">FOX</a>.
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
