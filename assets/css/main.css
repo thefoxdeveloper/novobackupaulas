@@ -3951,3 +3951,6 @@ button {
 .marginbt2 {
   margin-bottom: 2vh;
 }
+audio {
+  display: none;
+}
