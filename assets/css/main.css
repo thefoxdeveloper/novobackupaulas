@@ -3717,7 +3717,7 @@ ul.feature-icons li:nth-child(2) {
   }
 
   #wrapper > section.intro > header ul.actions {
-    display: none;
+    /* display: none; */
   }
 
   #wrapper > section.intro > header > * {
