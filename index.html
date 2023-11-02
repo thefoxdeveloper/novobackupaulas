@@ -14,6 +14,10 @@
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
+    <audio loop autoplay id="music" controls>
+      <source src="./assets/music/music.mp3" />
+    </audio>
+
     <div id="wrapper">
       <!-- Intro -->
       <section class="intro">
@@ -25,11 +29,18 @@
           </p>
           <ul class="actions">
             <li>
-              <a href="#welcome" class="arrow scrolly"
-                ><span class="label">Next</span></a
-              >
+              Fica mais legal clicando aqui
+              <a href="#welcome" id="playMusicLink" class="arrow scrolly"> </a>
             </li>
           </ul>
+          <script>
+            document
+              .getElementById("playMusicLink")
+              .addEventListener("click", function () {
+                var music = document.getElementById("music");
+                music.play();
+              });
+          </script>
         </header>
         <div class="content">
           <span class="image fill" data-position="center"
